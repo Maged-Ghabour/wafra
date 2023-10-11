@@ -18,10 +18,13 @@ var swiper = new Swiper(".swiper", {
 
   breakpoints: {
     0: {
+      slidesPerView: 1,
+    },
+    350: {
       slidesPerView: 2,
     },
     520: {
-      slidesPerView: 3,
+      slidesPerView: 2.5,
     },
     768: {
       slidesPerView: 4,
@@ -30,7 +33,7 @@ var swiper = new Swiper(".swiper", {
       slidesPerView: 5,
     },
     1200: {
-      slidesPerView: 5,
+      slidesPerView: 6,
     },
     1300: {
       slidesPerView: 6,
@@ -38,42 +41,15 @@ var swiper = new Swiper(".swiper", {
   },
 });
 
-var s7 = new Swiper(".s7", {
-  slidesPerView: 6,
-  spaceBetween: 20,
-  sliderPerGroup: 6,
-  loop: true,
-  centerSlide: "true",
-  fade: "true",
-  grabCursor: "true",
+var swiper1 = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  centeredSlides: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
-    el: ".swiper-pagination7",
+    el: ".swiper-pagination",
     clickable: true,
-    dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next7",
-    prevEl: ".swiper-button-prev7",
-  },
-
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    520: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 1,
-    },
-    1000: {
-      slidesPerView: 1,
-    },
-    1200: {
-      slidesPerView: 1,
-    },
-    1300: {
-      slidesPerView: 1,
-    },
   },
 });

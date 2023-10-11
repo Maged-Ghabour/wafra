@@ -4,21 +4,25 @@
   src: url("../fonts/Arslan-Wessam-B.ttf");
   font-weight: 100;
   font-family: "Arslan-Wessam-B";
+  font-display: swap;
 }
 @font-face {
   src: url("../fonts/noorLight.ttf");
   font-weight: lighter;
   font-family: "noor";
+  font-display: swap;
 }
 @font-face {
   src: url("../fonts/noorRegular.ttf");
   font-weight: normal;
   font-family: "noor";
+  font-display: swap;
 }
 @font-face {
   src: url("../fonts/noorBold.ttf");
   font-weight: bold;
   font-family: "noor";
+  font-display: swap;
 }
 /* End Import Fonts  */
 
@@ -149,6 +153,22 @@ landing .nav-link:hover {
   padding: 1rem;
 }
 
+.landing .form .btn-join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--secondary-color);
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+}
+.landing .form .btn-join:hover {
+  background-color: #328098;
+}
+
 /* End  Landing Page */
 
 /* Start Contact Us */
@@ -208,6 +228,9 @@ landing .nav-link:hover {
   text-align: center;
   font-weight: bold;
 }
+.feature .container .swiper-wrapper p {
+  font-size: 0.9rem;
+}
 
 /* Swiper */
 
@@ -215,7 +238,7 @@ landing .nav-link:hover {
   position: relative;
 }
 
-.swiper-slide {
+.feature .swiper-slide {
   border: 1px solid #e89940 !important;
   border-radius: 20px !important;
   height: auto;
@@ -223,12 +246,12 @@ landing .nav-link:hover {
 
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-  right: -15px;
+  right: -10px;
   left: auto;
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  left: -20px;
+  left: -7px;
   right: auto;
 }
 
@@ -263,7 +286,10 @@ landing .nav-link:hover {
 }
 
 .swiper-pagination-bullet {
-  background-color: var(--third_color);
+  background-color: var(--main-color);
+  border-radius: 5px;
+  height: 0.3rem;
+  width: 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -287,25 +313,31 @@ landing .nav-link:hover {
   font-weight: bold;
   margin-bottom: 2rem;
 }
-.features-platform p {
+.features-platform ul {
+  padding-right: 0;
+}
+
+.features-platform li {
+  list-style-type: none;
+  margin-bottom: 0.7rem;
   font-weight: lighter;
 }
-.features-platform img {
-}
+/* .features-platform ul li:before {
+  font-family: "FontAwesome";
+  margin-left: 0.5rem;
+  content: "\f058";
+  color: var(--main-color);
+} */
 
 /* End features Platform Section*/
 
 /* Start Footer Section */
 footer {
-  border-top: 6px solid var(--main-color);
+  border-top: 0.9rem solid var(--main-color);
   padding: 3rem 0;
 }
 footer .content h2 {
   font-weight: 900;
-}
-
-footer .content {
-  padding-left: 7rem;
 }
 
 footer .logo img {
@@ -321,3 +353,45 @@ footer .links i {
   color: #000;
 }
 /* End Footer Section */
+
+/* Start About Us Section */
+.about-us {
+  padding: 3rem 0;
+}
+.about-us .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-us .content .head {
+  display: flex;
+  align-items: center;
+}
+.about-us .content .head i {
+  color: var(--main-color);
+  font-size: 1.3rem;
+}
+.about-us .content .head h2 {
+  margin: 0 0.4rem;
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.about-us .content span {
+  display: inline-block;
+  margin-bottom: 1.7rem;
+}
+
+@media (max-width: 768px) {
+  .about-us .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-us .image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+}
+/* End About Us Section */
